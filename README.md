@@ -2,11 +2,11 @@
 
 A modern web application for exploring and discovering Pokémon using the PokeAPI.
 
-![Pokemon Explorer Screenshot](public/pokemon-explorer-screenshot.png)
+[Live Pokemon Explorer](https://pokemon-explorer-xi.vercel.app/)
 
 ## 🚀 Technologies
 
-- **Next.js 14** - React framework with App Router for server and client components
+- **Next.js 15** - React framework with App Router for server and client components
 - **TypeScript** - Static type checking for improved code quality
 - **Tailwind CSS** - Utility-first CSS framework for styling
 - **Framer Motion** - Animation library for smooth transitions
