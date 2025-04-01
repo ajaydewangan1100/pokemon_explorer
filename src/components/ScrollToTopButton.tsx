@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 export default function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false);
 
-  // Show button when user scrolls down 300px
   useEffect(() => {
     const toggleVisibility = () => {
       if (window.scrollY > 300) {

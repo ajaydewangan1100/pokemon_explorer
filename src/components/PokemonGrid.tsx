@@ -25,7 +25,6 @@ function PokemonGrid({ initialPokemons }: PokemonGridProps) {
   const [offset, setOffset] = useState(ITEMS_PER_PAGE);
   const [isClient, setIsClient] = useState(false);
 
-  // Handle client-side rendering
   useEffect(() => {
     setIsClient(true);
   }, []);
@@ -42,7 +41,6 @@ function PokemonGrid({ initialPokemons }: PokemonGridProps) {
 
       const results = await Promise.allSettled(pokemonPromises);
 
-      // Filter out rejected promises and extract the fulfilled values
       const pokemonDetails = results
         .filter(
           (result): result is PromiseFulfilledResult<Pokemon> =>
@@ -52,7 +50,6 @@ function PokemonGrid({ initialPokemons }: PokemonGridProps) {
 
       setPokemons((prev) => [...prev, ...pokemonDetails]);
 
-      // Check if we've reached the end
       const nextOffset = currentOffset + ITEMS_PER_PAGE;
       setHasMore(nextOffset < TOTAL_POKEMON);
       setOffset(nextOffset);

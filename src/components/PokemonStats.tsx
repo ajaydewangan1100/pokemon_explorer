@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-const MAX_STAT_VALUE = 255; // Maximum possible base stat value in Pokemon
+const MAX_STAT_VALUE = 255; 
 
 export default function PokemonStats({
   stats,

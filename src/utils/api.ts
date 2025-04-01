@@ -25,12 +25,12 @@ export async function getPokemonByName(name: string): Promise<Pokemon | null> {
 
     if (!response.ok) {
       console.error(`Error fetching Pokémon: ${response.statusText}`);
-      return null; // Gracefully return null instead of throwing an error
+      return null; 
     }
 
     return await response.json();
   } catch (error) {
     console.error("Network error:", error);
-    return null; // Return null if there's a network error
+    return null;
   }
 }

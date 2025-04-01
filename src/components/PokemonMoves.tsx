@@ -1,4 +1,4 @@
-"use client"; // Ensure it's a client component
+"use client";
 
 import { motion } from "framer-motion";
 
@@ -13,7 +13,7 @@ export default function PokemonMoves({
       <div className="relative w-full overflow-hidden">
         <motion.div
           className="flex gap-4 py-2 px-2"
-          animate={{ x: ["0%", "-50%"] }} // Moves left
+          animate={{ x: ["0%", "-50%"] }} 
           transition={{ repeat: Infinity, duration: 4, ease: "linear" }}>
           {moves.concat(moves).map((move, index) => (
             <p

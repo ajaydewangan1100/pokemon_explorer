@@ -5,8 +5,7 @@ import { Pokemon } from "@/types/pokemon";
 
 const ITEMS_PER_PAGE = 18;
 
-// This enables Static Site Generation
-export const revalidate = 3600; // Revalidate every hour
+export const revalidate = 3600; // Revalidate - every  hour
 
 async function getInitialPokemons() {
   try {
@@ -19,7 +18,6 @@ async function getInitialPokemons() {
 
     const results = await Promise.allSettled(pokemonPromises);
 
-    // Filter out rejected promises and extract the fulfilled values
     const pokemonDetails = results
       .filter(
         (result): result is PromiseFulfilledResult<Pokemon> =>

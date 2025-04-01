@@ -7,42 +7,15 @@ import PokemonStats from "@/components/PokemonStats";
 import PokemonTypes from "@/components/PokemonTypes";
 import { getPokemonById } from "@/utils/api";
 import Link from "next/link";
-// import { Metadata } from "next";
 
-// Define params type but keep it simple
 type Params = {
   id: string;
 };
 
-// Override Next.js types to work around the type error
 export const dynamic = "force-dynamic";
 export const dynamicParams = true;
 
-// export async function generateMetadata({
-//   params,
-// }: {
-//   params: Params;
-// }): Promise<Metadata> {
-//   try {
-//     const pokemon = await getPokemonById(params.id);
-//     return {
-//       title: `${
-//         pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)
-//       } | Pokemon Explorer`,
-//       description: `View details about ${pokemon.name}, including stats, abilities, and more.`,
-//     };
-//   } catch (_error) {
-//     // Error is logged but not used
-//     return {
-//       title: "Pokemon Not Found | Pokemon Explorer",
-//       description: "The Pokemon you are looking for could not be found.",
-//     };
-//   }
-// }
-
-// Use a simple function signature
 export default async function PokemonPage({ params }: { params: Params }) {
-  // Use error handling to make the code more resilient
   try {
     const pokemon = await getPokemonById(params.id);
 
@@ -87,7 +60,6 @@ export default async function PokemonPage({ params }: { params: Params }) {
   }
 }
 
-// Break components into smaller pieces to simplify the main component
 function BackgroundElements() {
   return (
     <div className="absolute inset-0 overflow-hidden">
